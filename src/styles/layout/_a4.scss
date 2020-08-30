@@ -1,0 +1,73 @@
+.a4 {
+  background: white;
+  width: 210mm;
+  height: 297mm;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 25px;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  box-sizing: border-box;
+
+  p {
+    text-align: justify;
+    margin: 0 0 15px 0;
+  }
+
+  .logo {
+    display: block;
+    overflow: hidden;
+    img {
+      width: 80px;
+      float: right;
+    }
+
+    h1 {
+      font-size: 11px;
+    }
+  }
+
+  .intro {
+    h2 {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
+
+  .detail {
+    h3 {
+      margin: 15px 0;
+      font-size: 14px;
+      text-align: left;
+      font-weight: 700;
+    }
+  }
+}
+
+@media print {
+  .page-break {
+    display: block;
+    page-break-before: always;
+  }
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .a4 {
+    box-shadow: none;
+    margin: 0;
+  }
+  .noprint {
+    display: none;
+  }
+  .enable-print {
+    display: block;
+  }
+}
